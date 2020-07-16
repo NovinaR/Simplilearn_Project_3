@@ -1,0 +1,34 @@
+package com.onlinetest.model;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Results {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String useranswer;
+	
+	public Results() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUseranswer() {
+		return useranswer;
+	}
+
+	public void setUseranswer(String useranswer) {
+		this.useranswer = useranswer;
+	}
+
+}

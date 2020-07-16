@@ -1,0 +1,30 @@
+package com.onlinetest.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.onlinetest.dao.ResultsDAO;
+import com.onlinetest.model.Results;
+import com.onlinetest.service.ResultService;
+
+@Service
+public class ResultServiceImpl implements ResultService{
+	
+	@Autowired
+	private ResultsDAO dao;
+
+	@Override
+	public Results createResult(Results results) {
+		// TODO Auto-generated method stub
+		return dao.save(results);
+	}
+
+	@Override
+	public List<Results> getAllAnswers() {
+		// TODO Auto-generated method stub
+		return dao.findAll();
+	}
+
+}

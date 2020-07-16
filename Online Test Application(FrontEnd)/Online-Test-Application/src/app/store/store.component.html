@@ -1,0 +1,21 @@
+<!-- <input type="text" placeholder="Enter Question Number" [(ngModel)]="result.id">
+<input type="text" placeholder="Please enter your answer" [(ngModel)]="result.useranswer">
+<button (click)="createResults()">Submit Answer</button>
+<a routerLink="/back">Go back to Questions</a> -->
+
+<div>
+    <table border="1px">
+        <tr>
+            <td><input type="number" placeholder="Enter Question ID" [(ngModel)]="result.id"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter Answer" [(ngModel)]="result.useranswer"/></td>
+        </tr>
+        <tr>
+            <td><button (click)="createResults()">Submit Answer</button></td>
+        </tr>
+        <tr>
+            <a routerLink="/back">Go back to Questions</a>
+        </tr>
+    </table>
+</div>

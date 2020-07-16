@@ -1,0 +1,32 @@
+<!-- <div *ngFor="let onlinetest of onlinetests">
+    <h4>{{onlinetest.qno}}. {{onlinetest.question}}</h4>
+    <h6>1. {{onlinetest.option1}}</h6>
+    <h6>2. {{onlinetest.option2}}</h6>
+    <h6>3. {{onlinetest.option3}</h6>
+    <h6>4. {{onlinetest.option4}}</h6>
+    <a routerLink="/store">Enter Answer For the Question</a>
+</div> -->
+
+<table border="1px">
+    <tr>
+        <th>Question No</th>
+        <th>Question</th>
+        <th>Options</th>
+        <th>Answer this Question</th>
+    </tr>
+    <tr *ngFor="let onlinetest of onlinetests">
+        <td>{{onlinetest.qno}}</td>
+        <td>{{onlinetest.question}}</td>
+        <td>
+            <input type="radio" value="{{onlinetest.option1}}" [(ngModel)]="result.useranswer">{{onlinetest.option1}}<br/><br/>
+            <input type="radio" value="{{onlinetest.option2}}" [(ngModel)]="result.useranswer">{{onlinetest.option2}}<br/><br/>
+            <input type="radio" value="{{onlinetest.option3}}" [(ngModel)]="result.useranswer">{{onlinetest.option3}}<br/><br/>
+            <input type="radio" value="{{onlinetest.option4}}" [(ngModel)]="result.useranswer">{{onlinetest.option4}}
+        </td>
+        <td><input type="text" placeHolder="Question No" [(ngModel)]="result.id"/><br/><button (click)="createResults()">Submit Answer</button></td>
+    </tr>
+</table>
+
+
+
+

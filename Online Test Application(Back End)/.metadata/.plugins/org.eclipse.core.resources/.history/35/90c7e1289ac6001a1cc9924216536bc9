@@ -1,0 +1,5 @@
+package com.onlinetest.service;
+
+public interface OnlineTestService {
+
+}

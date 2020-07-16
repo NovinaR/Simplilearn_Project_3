@@ -1,0 +1,20 @@
+<table border="1px">
+    <tr>
+        <th>Question No</th>
+        <th>Question</th>
+        <th>Correct Answer</th>
+    </tr>
+    <tr *ngFor="let onlinetest of onlinetests">
+        <td>{{onlinetest.qno}}</td>
+        <td>{{onlinetest.question}}</td>
+        <td>{{onlinetest.correctanswer}}</td>
+    </tr>
+
+        <tr>
+            <th>Answers You Entered</th>
+        </tr>
+        <tr *ngFor="let results of result">
+            <td>{{results.useranswer}}</td>
+        </tr>
+   
+</table>

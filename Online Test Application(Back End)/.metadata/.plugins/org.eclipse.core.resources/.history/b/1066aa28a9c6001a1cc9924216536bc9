@@ -1,0 +1,13 @@
+package com.onlinetest.service;
+
+import java.util.List;
+
+import com.onlinetest.model.OnlineTest;
+import com.onlinetest.model.Results;
+
+public interface OnlineTestService {
+	
+	public List<OnlineTest> getAll();
+	public Results createResult(Results results);
+
+}

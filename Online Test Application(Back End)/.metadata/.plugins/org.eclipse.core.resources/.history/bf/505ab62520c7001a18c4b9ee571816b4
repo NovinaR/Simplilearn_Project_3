@@ -1,0 +1,38 @@
+package com.onlinetest.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.onlinetest.dao.OnlineTestDAO;
+import com.onlinetest.model.OnlineTest;
+import com.onlinetest.model.Results;
+import com.onlinetest.service.OnlineTestService;
+
+@Service
+public class OnlineTestServiceImpl implements OnlineTestService{
+	
+	@Autowired
+	private OnlineTestDAO dao;
+
+	@Override
+	public List<OnlineTest> getAll() {
+		// TODO Auto-generated method stub
+		return dao.findAll();
+	}
+
+	@Override
+	public int getScore(OnlineTest onlinetest) {
+		int score =0;
+		List<OnlineTest> correct=dao.findAll();
+		List<Results> entered=dao.findAll();
+		for (int i = 1; i <= quiz.size(); i++){
+			Quiz q=qdao.getOne(i);
+				Answer a=adao.getOne(i);
+				if(q.getCorrect_answer()==a.answer) {
+					score=score+1;}
+	}
+
+
+}

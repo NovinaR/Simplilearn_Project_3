@@ -1,0 +1,29 @@
+package com.onlinetest.model;
+
+public class Results {
+	
+	@id
+	private int id;
+	private String useranswer;
+	
+	public ResultsModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUseranswer() {
+		return useranswer;
+	}
+
+	public void setUseranswer(String useranswer) {
+		this.useranswer = useranswer;
+	}
+
+}

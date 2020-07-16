@@ -1,0 +1,9 @@
+package com.onlinetest.service;
+
+import com.onlinetest.model.Results;
+
+public interface ResultService {
+	
+	public Results createResult(Results results);
+
+}
